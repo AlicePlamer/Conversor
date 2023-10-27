@@ -11,6 +11,7 @@ function convertValues() {
     const euroToday = 6.2
     const pesoToday = 0.13
     const libraToday = 6.08
+    const realToday = 1.0
 
     
 
@@ -42,6 +43,14 @@ function convertValues() {
             style: "currency",
             currency: "UYU"
         }).format(inputCurrencyValue / pesoToday)
+
+    }
+
+    if (currencySelect.value == "real") { // se o select estiver selecionado o valor de dolar, entre aqui
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue / realRoday)
 
     }
 
